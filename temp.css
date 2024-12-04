@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: #B1B9C1;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    height: 5.125rem; 
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5.625rem; 
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1E2532;
+    position: relative;
+}
+
+.logo {
+    width: 1.5625rem; 
+    height: 1.5625rem; 
+}
+
+a {
+    text-decoration: none;
+    color: #1E2532;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem; 
+}
+
+.sample-cv {
+    text-align: center;
+}
+
+.samples {
+    width: 100%;
+    height: calc(100vh - 5.125rem); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 2.5rem; 
+    padding: 0 5rem; 
+    margin-left: 2.5rem; 
+    gap: 1.25rem;
+}
+
+.sample1, .sample2, .sample3, .sample4, .sample5, .sample6, .sample7 {
+    position: relative;
+    object-fit: contain;
+    width: 15.625rem; /* 250px */
+    height: 21.875rem; /* 350px */
+    border-radius: 1.25rem; /* 20px */
+    box-shadow: 0px 0.625rem 1.875rem rgba(0, 0, 0, 0.1); /* 10px 30px */
+    transform: translateY(-0.625rem); /* -10px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sample1:hover, .sample2:hover, .sample3:hover, .sample4:hover, .sample5:hover, .sample6:hover, .sample7:hover {
+    transform: translateY(-0.9375rem); /* -15px */
+    box-shadow: 0px 0.9375rem 2.5rem rgba(0, 0, 0, 0.3); /* 15px 40px */
+}
+
+.sample1::before, .sample2::before, .sample3::before, .sample4::before, .sample5::before, .sample6::before, .sample7::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 1.25rem; /* 20px */
+}
+
+.sample1:hover::before, .sample2:hover::before, .sample3:hover::before, .sample4:hover::before, .sample5:hover::before, .sample6:hover::before, .sample7:hover::before {
+    opacity: 1;
+    border-radius: 1.25rem; /* 20px */
+}
+
+.sample1 img, .sample2 img, .sample3 img, .sample4 img, .sample5 img, .sample6 img, .sample7 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem; /* 20px */
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.sample1 .heading, .sample2 .heading, .sample3 .heading, .sample4 .heading, .sample5 .heading, .sample6 .heading, .sample7 .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.sample1:hover .heading, .sample2:hover .heading, .sample3:hover .heading, .sample4:hover .heading, .sample5:hover .heading, .sample6:hover .heading, .sample7:hover .heading {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    ul {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 0 2.5rem; 
+        font-size: 1rem; 
+    }
+
+    .logo {
+        width: 1.25rem; 
+        height: 1.25rem; 
+    }
+
+    
+    ul {
+        height: auto;
+        padding: 1.25rem 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    ul {
+        padding: 1rem; 
+    }
+
+    .logo {
+        width: 1.125rem;
+        height: 1.125rem; 
+    }
+}
+
